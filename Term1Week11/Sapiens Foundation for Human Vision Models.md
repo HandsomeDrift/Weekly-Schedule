@@ -190,9 +190,11 @@ $$
 
 我们观察到，**在 Hi4D 图像上，与表现最优的 Depth-Anything 模型相比，RMSE 降低了 20%**。需要强调的是，尽管基线模型是在多种场景上进行训练的，但 **Sapiens 专注于以人为中心的深度估计任务**。**图8** 展示了 Sapiens-1B 与 Depth-Anything-L 之间在深度估计任务上的定性比较。为了确保公平比较，在基线可视化中使用人体遮罩对预测深度进行了重新归一化处理。  
 
-![image-20241116192302266](C:\Users\Drift\Desktop\Weekly-Schedule\Term1Week11\assets\image-20241116192302266.png)
+![image-20241123211326097](assets/image-20241123211326097.png)
 
-![image-20241116195548835](C:\Users\Drift\Desktop\Weekly-Schedule\Term1Week11\assets\image-20241116195548835.png)
+![image-20241116192302266](assets\image-20241116192302266.png)
+
+![image-20241116195548835](assets\image-20241116195548835.png)
 
 ### **表面法线估计**  
 用于表面法线评估的数据集与深度估计所使用的数据集相同。根据文献【30】，我们报告了以下指标：平均角误差（Mean Angular Error, MAE）、中值角误差（Median Angular Error），以及在误差角度 \(t\) （\(t \in \{11.25^\circ, 22.5^\circ, 30^\circ\}\)）内的像素百分比。  
