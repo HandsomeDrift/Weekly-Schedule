@@ -103,7 +103,7 @@
 ### **2D姿态估计**  
 我们采用==自上而下的方法==，该方法试图==从输入图像 $ I \in \mathbb{R}^{H \times W \times 3} $ 中检测 $ K $ 个关键点的位置==。大多数方法将此问题表述为热力图预测，其中每个关键点的热力图表示该关键点在任意空间位置存在的概率。  
 
-类似于【111】，我们定义了一个姿态估计transformer $ \mathcal{P} $ 来处理关键点检测。训练和推理中，边界框被缩放至 $ H \times W $ 并作为输入提供给 $ \mathcal{P} $。令 $ y \in \mathbb{R}^{H \times W \times K} $ 表示与给定输入 $ I $ 对应的== $ K $ 个关键点的热力图==。姿态估计器将 $ I $ 转换为一组预测热力图 $ \hat{y} \in \mathbb{R}^{H \times W \times K} $，使得 $ \hat{y} = \mathcal{P}(I) $。我们通过最小化均方误差损失来训练 $ \mathcal{P} $：  
+类似于【111】，我们定义了一个姿态估计transformer $ \mathcal{P} $ 来处理关键点检测。训练和推理中，边界框被缩放至 $ H \times W $ 并作为输入提供给 $ \mathcal{P} $。令 $ y \in \mathbb{R}^{H \times W \times K} $ 表示与给定输入 $ I $ 对应的==$ K $ 个关键点的热力图==。姿态估计器将 $ I $ 转换为一组预测热力图 $ \hat{y} \in \mathbb{R}^{H \times W \times K} $，使得 $ \hat{y} = \mathcal{P}(I) $。我们通过最小化均方误差损失来训练 $ \mathcal{P} $：  
 $$
 \mathcal{L}_{\text{pose}} = \text{MSE}(y, \hat{y})
 $$
